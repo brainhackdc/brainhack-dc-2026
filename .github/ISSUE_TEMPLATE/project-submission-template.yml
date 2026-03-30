@@ -164,7 +164,7 @@ body:
   # CODE OF CONDUCT
   # ----------------------------------------------------------------------------
 
-    - type: markdown
+  - type: markdown
     attributes:
       value: |
         ## Code of Conduct
