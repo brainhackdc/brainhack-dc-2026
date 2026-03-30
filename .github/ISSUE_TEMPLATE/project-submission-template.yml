@@ -1,0 +1,179 @@
+name: Project submission template
+
+# See the json schema to help you create / update this form
+# https://json.schemastore.org/github-issue-forms.json
+
+description: Fill in this template to submit a project
+
+title: "[Project]: "
+
+labels: ["project"]
+
+# assignees:
+#   - ["aptinis"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a BrainHack project!
+
+  # ----------------------------------------------------------------------------
+  # PROJECT INFO
+  # ----------------------------------------------------------------------------
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Project info
+
+  - type: input
+    id: title
+    attributes:
+      label: Title 
+      description: Add a title to describe your project.
+    validations:
+      required: true
+
+  - type: textarea
+    id: leaders
+    attributes:
+      label: Leaders
+      description: Add the full name (and GitHub username or contact info if possible) of the project leaders.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Project Description
+      description: Please provide a short project description of your project.
+      value: |
+        - What are you doing, for whom, and why?
+        - What makes your project special and exciting?
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Project Goals
+      description: What you hope to achieve?
+      value: |
+        - Try to provide goals of varying complexity for contributors with different sets of skills.
+        - How to get started?
+        - What skills or learning opportunities are involved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Useful links
+      description: Please provide links to any relevant materials (e.g., website, repo, slides, papers, data, etc.)
+      placeholder: |
+        - If your project already exists, please provide a link to project
+        repository/sources.
+        - Include any other useful links.
+    validations:
+      required: false
+
+  # ----------------------------------------------------------------------------
+  # LABELS
+  # ----------------------------------------------------------------------------
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Project labels
+
+        These labels can help match your project with the attendees' interests.
+
+  - type: dropdown
+    attributes:
+      label: Development status
+      description: What is the current stage of the project?
+      multiple: false
+      options:
+        - 0_concept_no_content
+        - 1_basic structure
+        - 2_releases_existing
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Type (Select all that apply)
+      multiple: true
+      options:
+        - coding_methods
+        - data_management
+        - documentation
+        - method_development
+        - pipeline_development
+        - tutorial_recording
+        - visualization
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Modalities (Select all that apply)
+      multiple: true
+      options:
+        - behavioral
+        - DWI
+        - ECG
+        - ECOG
+        - EEG
+        - eye_tracking
+        - fMRI
+        - fNIRS
+        - MEG
+        - MRI
+        - PET
+        - TDCS
+        - TMS
+        - other
+        - not_applicable
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Programming language (Select all that apply)
+      multiple: true
+      options:
+        - Python
+        - Matlab
+        - '`R`'
+        - Julia
+        - html_css
+        - javascript
+        - Java
+        - C++
+        - unix_command_line
+        - shell_scripting
+        - other
+        - not_applicable
+    validations:
+      required: true
+
+  # ----------------------------------------------------------------------------
+  # CODE OF CONDUCT
+  # ----------------------------------------------------------------------------
+
+    - type: markdown
+    attributes:
+      value: |
+        ## Code of Conduct
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Agreement to Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](http://www.brainhack.org/code-of-conduct.html).
+      options:
+        - label: I agree to follow BrainHack's Code of Conduct
+          required: true
