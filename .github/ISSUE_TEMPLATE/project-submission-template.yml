@@ -60,6 +60,8 @@ body:
       label: Project Goals
       description: What you hope to achieve?
       value: |
+        - Describe project goals and tasks
+        - What kind of skills and level of difficulty is involved?
         - Try to provide goals of varying complexity for contributors with different sets of skills.
         - How to get started?
         - What skills or learning opportunities are involved?
@@ -173,7 +175,7 @@ body:
     id: terms
     attributes:
       label: Agreement to Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](http://www.brainhack.org/code-of-conduct.html).
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://brainhack.org/code-of-conduct.html).
       options:
         - label: I agree to follow BrainHack's Code of Conduct
           required: true
